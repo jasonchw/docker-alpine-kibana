@@ -1,0 +1,16 @@
+{
+    "services" : [{
+            "id" : "kibana",
+            "name" : "kibana",
+            "tags" : [],
+            "port" : 5601,
+            "checks" : [{
+                    "script" : "nmap 127.0.0.1 -PN -p 5601 | grep open",
+                    "interval" : "5s"
+                }
+
+            ]
+        }
+    ]
+}
+
