@@ -1,4 +1,4 @@
-FROM jasonchw/alpine-consul
+FROM jasonchw/alpine-consul:0.7.0
 
 ARG KIBANA_VER=4.5.4
 ARG KIBANA_URL=https://download.elastic.co/kibana/kibana
