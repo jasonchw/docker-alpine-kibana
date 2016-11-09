@@ -1,8 +1,11 @@
 FROM jasonchw/alpine-consul:0.7.0
 
-ARG KIBANA_VER=4.5.4
+# https://download.elastic.co/kibana/kibana/kibana-4.5.4-linux-x64.tar.gz
+# https://download.elastic.co/kibana/kibana/kibana-4.6.2-linux-x86_64.tar.gz
+
+ARG KIBANA_VER=4.6.2
 ARG KIBANA_URL=https://download.elastic.co/kibana/kibana
-ARG KIBANA_PLATFORM=linux-x64
+ARG KIBANA_PLATFORM=linux-x86_64
 
 ENV LANG=C.UTF-8 
 
