@@ -31,12 +31,14 @@ COPY ./kibana-logrotate       /etc/logrotate.d/kibana
 
 # startup scripts
 COPY docker-entrypoint.sh     /usr/local/bin/docker-entrypoint.sh
+COPY update-healthcheck.sh    /usr/local/bin/update-healthcheck.sh
 COPY start-kibana.sh          /usr/local/bin/start-kibana.sh
 COPY healthcheck.sh           /usr/local/bin/healthcheck.sh
 
 RUN chown -R kibana:kibana /opt/kibana/ && \
     chown -R kibana:kibana /var/log/kibana/ && \
     chmod +x /usr/local/bin/docker-entrypoint.sh && \
+    chmod +x /usr/local/bin/update-healthcheck.sh && \
     chmod +x /usr/local/bin/start-kibana.sh && \
     chmod +x /usr/local/bin/healthcheck.sh && \
     chmod 644 /etc/logrotate.d/kibana
